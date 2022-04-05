@@ -1,0 +1,14 @@
+{
+  "name": "primeiroprojetocypress",
+  "version": "1.0.0",
+  "description": "Primeiro projeto  co  cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Daniel Medrado",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.5.3"
+  }
+}
