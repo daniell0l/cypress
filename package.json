@@ -9,6 +9,7 @@
   "author": "Daniel Medrado",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.5.3"
+    "cypress": "^9.5.3",
+    "mochawesome": "^7.1.3"
   }
 }
