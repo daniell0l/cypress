@@ -1,7 +1,10 @@
 
 describe('Busca fotos e dados', () => {
 
-    it('busca fotos do flavio', () => {
+    it.only('busca fotos do flavio', () => {
+
+        const tempoEsperado = Math.random() * 2000;
+
         cy.request({
             method: 'GET',
             url: 'https://apialurapic.herokuapp.com/flavio/photos'
@@ -10,10 +13,11 @@ describe('Busca fotos e dados', () => {
             expect(res.body).is.not.empty
             expect(res.body[0]).to.have.property('description')
             expect(res.body[0].description).to.be.equal('Farol iluminado')
+            expect(res.duration).to.be.lte(tempoEsperado);
         })
     })
 
-    it.only('busca fotos do flavio', () => {
+    it('busca fotos do flavio', () => {
         cy.request({
             method: 'POST',
             url: 'https://apialurapic.herokuapp.com/user/login',
